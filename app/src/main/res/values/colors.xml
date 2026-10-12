@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Colores tomados del mockup de Catálogo Express -->
+<resources>
+    <color name="morado">#FF9B47F2</color>
+    <color name="morado_oscuro">#FF3B1070</color>
+    <color name="morado_claro">#FFF4ECFE</color>
+    <color name="morado_banner">#FFDDBDF7</color>
+    <color name="borde">#FFC9A6EE</color>
+    <color name="gris_texto">#FF6E6E6E</color>
+    <color name="gris_borde">#FFD6D6D6</color>
+    <color name="blanco">#FFFFFFFF</color>
+    <color name="negro">#FF000000</color>
+    <color name="verde">#FF2E7D32</color>
+    <color name="rojo">#FFC62828</color>
+</resources>

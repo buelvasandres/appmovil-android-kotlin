@@ -2,8 +2,8 @@ name: Build APK
 
 on:
   push:
-    branches: [main, master, developer]
-  workflow_dispatch:
+    branches: [main, master]
+  workflow_dispatch:   # permite ejecutarlo a mano desde la pestaña Actions
 
 jobs:
   build:
@@ -18,28 +18,16 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Instalar Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          cache: true
-
-      - name: Generar la carpeta android (si no existe)
-        run: |
-          if [ ! -d android ]; then
-            flutter create --platforms=android --project-name catalogo_express --org co.edu.poligran .
-            sed -i 's/android:label="[^"]*"/android:label="Catálogo Express"/' android/app/src/main/AndroidManifest.xml
-            cp -r branding/android_icons/* android/app/src/main/res/
-          fi
-
-      - name: Descargar dependencias
-        run: flutter pub get
+      - name: Preparar Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Compilar APK
-        run: flutter build apk --release
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --stacktrace
 
       - name: Renombrar el APK
-        run: cp build/app/outputs/flutter-apk/app-release.apk CatalogoExpress.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk CatalogoExpress.apk
 
       - name: Publicar el APK para descargar
         uses: actions/upload-artifact@v4

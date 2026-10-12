@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla de registro (RF-01, RF-04) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnVolver"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_circulo"
+                android:contentDescription="@string/ya_tienes_cuenta"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/morado_oscuro" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_logo" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/registro_titulo"
+            android:textColor="@color/negro"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/registro_subtitulo"
+            android:textColor="@color/gris_texto" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            style="@style/CajaTexto"
+            android:layout_marginTop="8dp"
+            android:autofillHints="name"
+            android:drawableStart="@drawable/ic_person"
+            android:hint="@string/hint_nombre"
+            android:inputType="textPersonName|textCapWords" />
+
+        <EditText
+            android:id="@+id/etTelefono"
+            style="@style/CajaTexto"
+            android:layout_marginTop="10dp"
+            android:autofillHints="phone"
+            android:drawableStart="@drawable/ic_phone"
+            android:hint="@string/hint_telefono"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/etCorreoRegistro"
+            style="@style/CajaTexto"
+            android:layout_marginTop="10dp"
+            android:autofillHints="emailAddress"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="@string/hint_correo"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etContrasenaRegistro"
+            style="@style/CajaTexto"
+            android:layout_marginTop="10dp"
+            android:autofillHints="newPassword"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="@string/hint_contrasena"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/etConfirmar"
+            style="@style/CajaTexto"
+            android:layout_marginTop="10dp"
+            android:autofillHints="newPassword"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="@string/hint_confirmar"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/cbTerminos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/acepto_terminos" />
+
+        <Button
+            android:id="@+id/btnRegistrarse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_registrarse" />
+
+        <TextView
+            android:id="@+id/tvIrLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/ya_tienes_cuenta"
+            android:textColor="@color/morado"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

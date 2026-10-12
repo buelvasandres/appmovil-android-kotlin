@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Catálogo Express</string>
+    <string name="eslogan">Todo lo que buscas en un mismo lugar</string>
+
+    <!-- Login -->
+    <string name="login_titulo">Bienvenido de nuevo</string>
+    <string name="login_subtitulo">Inicia sesión para continuar</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="recordarme">Recordarme</string>
+    <string name="olvide_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="btn_iniciar_sesion">Iniciar sesión</string>
+    <string name="no_tienes_cuenta">¿No tienes una cuenta?</string>
+    <string name="registrate_aqui">Regístrate aquí</string>
+    <string name="cuentas_prueba">Cuenta de prueba: demo@catalogo.com / 123456</string>
+
+    <!-- Registro -->
+    <string name="registro_titulo">Crea tu cuenta</string>
+    <string name="registro_subtitulo">Únete a Catálogo Express y disfruta de la mejor experiencia de compra.</string>
+    <string name="hint_nombre">Nombre completo</string>
+    <string name="hint_telefono">Teléfono (opcional)</string>
+    <string name="hint_confirmar">Confirmar contraseña</string>
+    <string name="acepto_terminos">Acepto los términos y condiciones</string>
+    <string name="btn_registrarse">Registrarse</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes una cuenta? Inicia sesión</string>
+
+    <!-- Menú -->
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_catalogo">Catálogo</string>
+    <string name="menu_carrito">Carrito</string>
+    <string name="menu_web">Web</string>
+    <string name="menu_salir">Salir</string>
+
+    <!-- Perfil -->
+    <string name="perfil_datos">Datos de contacto</string>
+    <string name="perfil_estudios">Estudios</string>
+    <string name="perfil_experiencia">Experiencia</string>
+    <string name="perfil_intereses">Intereses de compra</string>
+    <string name="btn_editar_perfil">Editar perfil</string>
+
+    <!-- Catálogo -->
+    <string name="hint_buscar">Buscar productos…</string>
+    <string name="btn_agregar_carrito">Agregar al carrito</string>
+    <string name="catalogo_vacio">No se encontraron productos.</string>
+    <string name="toca_producto">Toca un producto para ver su descripción.</string>
+
+    <!-- Carrito -->
+    <string name="carrito_titulo">Mi carrito</string>
+    <string name="carrito_vacio">Tu carrito está vacío. Agrega productos desde el Catálogo.</string>
+    <string name="envio_express">Envío express (+ $ 10.000)</string>
+    <string name="metodo_pago">Método de pago</string>
+    <string name="pago_tarjeta">Tarjeta</string>
+    <string name="pago_pse">PSE</string>
+    <string name="pago_contraentrega">Contra entrega</string>
+    <string name="btn_vaciar">Vaciar</string>
+    <string name="btn_finalizar">Finalizar compra</string>
+    <string name="hint_direccion">Dirección de envío</string>
+
+    <!-- Web -->
+    <string name="hint_url">Escribe una dirección web</string>
+    <string name="btn_ir">Ir</string>
+
+    <string name="descripcion_imagen">Imagen</string>
+</resources>

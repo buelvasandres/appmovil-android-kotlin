@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fragmento Web: carga la página cuya URL se escribe en la caja de texto -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/etUrl"
+            style="@style/CajaTexto"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_language"
+            android:hint="@string/hint_url"
+            android:imeOptions="actionGo"
+            android:importantForAutofill="no"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnIr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:minWidth="0dp"
+            android:text="@string/btn_ir" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <ImageButton
+            android:id="@+id/btnAtras"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/descripcion_imagen"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/morado_oscuro" />
+
+        <ImageButton
+            android:id="@+id/btnRecargar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/descripcion_imagen"
+            android:src="@drawable/ic_refresh"
+            app:tint="@color/morado_oscuro" />
+
+        <ImageButton
+            android:id="@+id/btnInicio"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/descripcion_imagen"
+            android:src="@drawable/ic_home"
+            app:tint="@color/morado_oscuro" />
+
+        <ProgressBar
+            android:id="@+id/pbCarga"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:max="100" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wvPagina"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

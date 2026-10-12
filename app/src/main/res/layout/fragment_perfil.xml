@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Fragmento Perfil: foto, datos, estudios y experiencia de la persona.
+    Los campos de texto largos tienen su propia barra de desplazamiento.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/ivFotoPerfil"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_circulo"
+        android:contentDescription="@string/menu_perfil"
+        android:padding="14dp"
+        android:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/tvNombrePerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:textColor="@color/negro"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCargoPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/morado" />
+
+    <TextView
+        style="@style/TituloSeccion"
+        android:text="@string/perfil_datos" />
+
+    <TextView
+        android:id="@+id/tvCorreoPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/morado"
+        android:drawableStart="@drawable/ic_email"
+        android:gravity="center_vertical"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvTelefonoPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/morado"
+        android:drawableStart="@drawable/ic_phone"
+        android:gravity="center_vertical"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvCiudadPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/morado"
+        android:drawableStart="@drawable/ic_location_on"
+        android:gravity="center_vertical"
+        android:textSize="13sp" />
+
+    <TextView
+        style="@style/TituloSeccion"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/morado_oscuro"
+        android:drawableStart="@drawable/ic_school"
+        android:text="@string/perfil_estudios" />
+
+    <TextView
+        android:id="@+id/tvEstudios"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_input"
+        android:fadeScrollbars="false"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:textSize="13sp" />
+
+    <TextView
+        style="@style/TituloSeccion"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/morado_oscuro"
+        android:drawableStart="@drawable/ic_work"
+        android:text="@string/perfil_experiencia" />
+
+    <TextView
+        android:id="@+id/tvExperiencia"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_input"
+        android:fadeScrollbars="false"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnEditarPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_editar_perfil" />
+</LinearLayout>
