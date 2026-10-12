@@ -136,18 +136,65 @@ las variables de las vistas, luego `vincularVistas()` las une con sus identifica
 
 ## 4. Cómo obtener y probar la app
 
-**APK:** se compila solo con GitHub Actions cada vez que se suben cambios a `main`. Entra a
-**Actions → Build APK → última ejecución → Artifacts → CatalogoExpress-apk**, descomprime el
-.zip e instala `CatalogoExpress.apk` en un celular Android (permite "instalar apps de origen
-desconocido" si lo pide).
+**Cuenta de prueba:** `demo@catalogo.com` / `123456`
 
-**Android Studio (opcional):** *File → Open* y selecciona la carpeta del repositorio. Android
-Studio descarga lo necesario y permite ejecutar la app en un emulador o en un celular
-conectado por USB con el botón ▶.
+### Obtener el APK
+
+El APK se compila solo con **GitHub Actions** cada vez que se suben cambios a `main`.
+
+1. Ve a la pestaña **Actions** del repositorio y abre la última ejecución en verde de
+   **Build APK**.
+2. En la sección **Artifacts** descarga `CatalogoExpress-apk`.
+3. Descomprime el .zip; adentro está `CatalogoExpress.apk`.
+
+La versión entregada también está en la sección **Releases** del repositorio.
+
+### Opción A: en el navegador con Appetize.io (sin celular ni instalaciones)
+
+1. Entra a [appetize.io](https://appetize.io), crea una cuenta gratuita y elige **Upload**.
+2. Sube `CatalogoExpress.apk` y espera a que termine de procesarlo.
+3. Abre la app, elige un dispositivo (por ejemplo un Pixel) y pulsa **Tap to play**. La app
+   corre en un celular virtual que se maneja con el mouse y el teclado.
+
+El plan gratuito tiene minutos limitados al mes, así que conviene entrar con claro qué se
+va a probar o capturar.
+
+### Opción B: en un celular Android
+
+1. Pasa `CatalogoExpress.apk` al celular (WhatsApp, Drive o cable).
+2. Ábrelo y, si lo pide, permite *instalar apps de origen desconocido*.
+3. Abre **Catálogo Express** e ingresa con la cuenta de prueba.
+
+### Opción C: con Android Studio
+
+*File → Open* y selecciona la carpeta del repositorio. Android Studio descarga lo necesario
+y permite ejecutar la app con el botón ▶ en un emulador o en un celular conectado por USB.
+Es la mejor opción para la sustentación, porque se muestra el código y la app al mismo tiempo.
+
+> **¿Por qué no se ejecuta en Codespaces como la versión Flutter?** Flutter también genera
+> una versión web, por eso se podía ver en el navegador. Una app nativa de Android solo
+> corre en Android (celular o emulador), y los emuladores necesitan virtualización, que
+> Codespaces no ofrece. Codespaces sigue sirviendo para editar el código y subir cambios;
+> GitHub Actions se encarga de compilar el APK.
 
 ---
 
-## 5. Mejoras futuras
+## 5. Repositorio y trabajo en equipo
+
+| Rama | Contenido |
+|---|---|
+| `main` | Versión actual: Android nativo en Kotlin. Cada cambio aquí genera un APK nuevo. |
+| `version-flutter` | Primera versión del proyecto en Flutter, guardada como referencia. |
+
+- `main` está protegida: los cambios llegan por **Pull Request** y deben ser aprobados por
+  el responsable del repositorio (archivo `.github/CODEOWNERS`).
+- Para trabajar: crea una rama desde `main` (por ejemplo `feature/perfil`), haz tus cambios,
+  confírmalos y publica la rama. En GitHub aparecerá el botón **Compare & pull request**.
+- Antes de empezar, actualiza tu copia con `git checkout main && git pull`.
+
+---
+
+## 6. Mejoras futuras
 
 - Base de datos real (Room o Firebase) para que usuarios, productos y pedidos se guarden.
 - Módulo de video con un video promocional de la tienda.
